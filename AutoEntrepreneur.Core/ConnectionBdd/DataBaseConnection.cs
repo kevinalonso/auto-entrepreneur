@@ -17,7 +17,8 @@ namespace AutoEntrepreneur.Core.ConnectionBdd
         #region Construtor
         public DataBaseConnection()
         {
-
+            Initialize();
+            OpenConnection();
         }
         #endregion
 
@@ -25,10 +26,9 @@ namespace AutoEntrepreneur.Core.ConnectionBdd
         private void Initialize()
         {
             string connectionString;
-            connectionString = "SERVER=" + Config.SERVER + ";" + "DATABASE=" +
-            Config.DB + ";" + "UID=" + Config.UID + ";" + "PASSWORD=" + Config.PASSWORD + ";";
+            connectionString = "server=" + Config.SERVER + ";" + "uid=" + Config.UID + ";" + "password=" + Config.PASSWORD + "; Ssl Mode=none";
 
-            _Connection = new MySqlConnection(connectionString);
+            _Connection = new MySqlConnection(connectionString); 
         }
 
         #endregion
@@ -70,7 +70,7 @@ namespace AutoEntrepreneur.Core.ConnectionBdd
         /// Close connection
         /// </summary>
         /// <returns></returns>
-        private bool CloseConnection()
+        public bool CloseConnection()
         {
             try
             {
@@ -82,6 +82,13 @@ namespace AutoEntrepreneur.Core.ConnectionBdd
                 //MessageBox.Show(ex.Message);
                 return false;
             }
+        }
+        #endregion
+
+        #region Method
+        public MySqlConnection Conn()
+        {
+            return _Connection;
         }
         #endregion
     }

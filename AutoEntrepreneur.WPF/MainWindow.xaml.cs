@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoEntrepreneur.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace AutoEntrepreneur.WPF
         public MainWindow()
         {
             InitializeComponent();
+            MainViewModel vm = new MainViewModel();
+            this.DataContext = vm;
         }
     }
 }

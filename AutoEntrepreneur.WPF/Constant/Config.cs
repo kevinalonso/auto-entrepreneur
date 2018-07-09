@@ -23,5 +23,9 @@ namespace AutoEntrepreneur.WPF.Constant
         public const string HEADER_SAUVEGARDER = "Sauvegarder";
         public const string HEADER_QUITTER = "Quitter";
         #endregion
+
+        #region SqlCommand
+        public const string CREATE_DATABASE = "CREATE DATABASE IF NOT EXISTS `auto_entrepreneur`;";
+        #endregion
     }
 }

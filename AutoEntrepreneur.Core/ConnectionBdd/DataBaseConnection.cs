@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using AutoEntrepreneur.Core.Constant;
 
 namespace AutoEntrepreneur.Core.ConnectionBdd
 {
@@ -11,10 +12,6 @@ namespace AutoEntrepreneur.Core.ConnectionBdd
     {
         #region Fields
         private MySqlConnection _Connection;
-        private string _Server;
-        private string _Db;
-        private string _Uid;
-        private string _Password;
         #endregion
 
         #region Construtor
@@ -27,14 +24,9 @@ namespace AutoEntrepreneur.Core.ConnectionBdd
         #region InitializeValues
         private void Initialize()
         {
-            _Server = "localhost";
-            _Db = "auto_entrepreneur";
-            _Uid = "root";
-            _Password = "";
-
             string connectionString;
-            connectionString = "SERVER=" + _Server + ";" + "DATABASE=" +
-            _Db + ";" + "UID=" + _Uid + ";" + "PASSWORD=" + _Password + ";";
+            connectionString = "SERVER=" + Config.SERVER + ";" + "DATABASE=" +
+            Config.DB + ";" + "UID=" + Config.UID + ";" + "PASSWORD=" + Config.PASSWORD + ";";
 
             _Connection = new MySqlConnection(connectionString);
         }

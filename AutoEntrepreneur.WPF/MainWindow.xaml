@@ -4,12 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoEntrepreneur.WPF"
+        xmlns:const="clr-namespace:AutoEntrepreneur.WPF.Constant"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="500">
     <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-    </Grid.RowDefinitions>                                                    
+      <Grid.RowDefinitions>
+        <RowDefinition Height="20"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+    <Grid Grid.Row="0">
+      <Menu>
+        <MenuItem Header="{x:Static const:Config.HEADER_FICHIER}">
+          <MenuItem Header="{x:Static const:Config.HEADER_SAUVEGARDER}"/>
+          <MenuItem Header="{x:Static const:Config.HEADER_QUITTER}"/>
+        </MenuItem>
+        <MenuItem Header="{x:Static const:Config.HEADER_CLIENT}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_PRODUIT}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_FACTURATION}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_FACTURE}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_DEVIS}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_CA}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_MOI}"/>
+        <MenuItem Header="{x:Static const:Config.HEADER_A_PROPOS}"/>
+      </Menu>  
     </Grid>
+      
+    <Grid Grid.Row="1">
+      
+    </Grid>
+
+  </Grid>
 </Window>

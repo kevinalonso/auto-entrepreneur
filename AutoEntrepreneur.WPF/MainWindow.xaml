@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoEntrepreneur.WPF"
         xmlns:const="clr-namespace:AutoEntrepreneur.WPF.Constant"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="500">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="20"/>

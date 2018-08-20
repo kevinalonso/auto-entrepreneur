@@ -1,0 +1,53 @@
+﻿<Window x:Class="AutoEntrepreneur.WPF.Views.FactoryView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoEntrepreneur.WPF.Views"
+        xmlns:const="clr-namespace:AutoEntrepreneur.WPF.Constant"
+        mc:Ignorable="d"
+        Title="FactoryView" Height="300" Width="300">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="185"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+    <Grid Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="25"/>
+        <RowDefinition Height="25"/>
+        <RowDefinition Height="25"/>
+        <RowDefinition Height="25"/>
+        <RowDefinition Height="25"/>
+        <RowDefinition Height="25"/>
+        <RowDefinition Height="25"/>
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0" Grid.Column="0" Content="{x:Static const:Config.LABEL_LASTNAME}"/>
+      <Label Grid.Row="1" Grid.Column="0" Content="{x:Static const:Config.LABEL_FIRSTNAME}"/>
+      <Label Grid.Row="2" Grid.Column="0" Content="{x:Static const:Config.LABEL_FACTORY_NAME}"/>
+      <Label Grid.Row="3" Grid.Column="0" Content="{x:Static const:Config.LABEL_ADRESSE}"/>
+      <Label Grid.Row="4" Grid.Column="0" Content="{x:Static const:Config.LABEL_VILLE}"/>
+      <Label Grid.Row="5" Grid.Column="0" Content="{x:Static const:Config.LABEL_TEL}"/>
+      <Label Grid.Row="6" Grid.Column="0" Content="{x:Static const:Config.LABEL_SIRET}"/>
+
+      <TextBox Grid.Row="0" Grid.Column="1" Text=""/>
+      <TextBox Grid.Row="1" Grid.Column="1" Text=""/>
+      <TextBox Grid.Row="2" Grid.Column="1" Text=""/>
+      <TextBox Grid.Row="3" Grid.Column="1" Text=""/>
+      <TextBox Grid.Row="4" Grid.Column="1" Text=""/>
+      <TextBox Grid.Row="5" Grid.Column="1" Text=""/>
+      <TextBox Grid.Row="6" Grid.Column="1" Text=""/>
+    </Grid>
+
+    <Grid Grid.Row="1">
+
+    </Grid>
+  </Grid>
+</Window>
